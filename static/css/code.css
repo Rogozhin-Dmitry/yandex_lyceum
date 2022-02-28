@@ -1,0 +1,38 @@
+pre {
+    margin: 0.5em 2em;
+}
+iframe {
+    display: block;
+    height: 11.8rem;
+    overflow: auto;
+    width: 100%;
+    margin-top: -2.3rem;
+}
+pre:before {
+    content: "Code:";
+    display: block;
+    font-size: 0.8em;
+    background: var(--bg-color);
+    border: var(--code-border) solid 1px;
+    border-bottom: 0;
+    color: var(--text-color);
+    height: 1rem;
+}
+
+
+.cod__container {
+  border: var(--code-border) solid 1px;
+  display: block;
+  max-height: 12rem;
+  width: 100%;
+  margin-top: -1.2rem;
+}
+
+
+ .iframe__dark {
+   filter: invert(100%);
+ 	-ms-filter: invert(100%);
+ 	-webkit-filter: invert(100%);
+ 	-moz-filter: invert(100%);
+ 	-o-filter: invert(100%);
+ }

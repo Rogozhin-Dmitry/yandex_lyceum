@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Мои проекты</title>
+    <link rel="stylesheet" href="../static/css/main.css">
+    <link rel="stylesheet" href="../static/css/code.css">
+    <link rel="shortcut icon" href="../static/images/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <a href="../index.html" class="nav__logo">Dmitry Rogozhin</a>
+        <ul class="nav__menu">
+          <li class="nav__item">
+            <a href="addresses.html" class="nav__link">Адреса</a>
+          </li>
+          <li class="nav__item">
+            <a href="hobbies.html" class="nav__link">Увлечения</a>
+          </li>
+          <li class="nav__item">
+            <a href="project.html" class="nav__link">Проекты</a>
+          </li>
+          <li class="nav__item">
+            <button class="nav__btn" id="switch__theme__btn">Светлая тема</button>
+          </li>
+        </ul>
+        <div class="hamb">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <div class="container">
+        <div class="heading">
+          <h1>Мои проекты</h1>
+        </div>
+        <div class="content">
+          <p>
+            В этом разделе я немного напишу про свои проекты. <br>Я участвовал
+            в проекте "Коворкинг Байтика". Этот проект подразумевал, что обычные
+            школьники выполняют полноценные рабочие задачи для сторонних
+            клиентов (например, Администрация Троицка). Вот несколько подобных
+            проектов, к сожалению, на гит я их выложить не могу, поэтому просто
+            покажу их тут.
+          </p>
+          <p>
+            Первое, что хотелось бы показать, - достаточно интересный проект,
+            это main файл бота в телеграм, который собирает у людей обращения по
+            поводу борщевика в Новой Москве. Для этого пользователю необходимо
+            или передать своё местоположение, или указать его на специальном
+            сайте. После того как обращение будет сформировано, оно
+            переконвертируестя в doc файл, и отправится на почту заказчика.
+            Сам проект реализован почти на фласк, карта же собой представляет
+            элемент js api Яндекс карт, к которому просто привязан простой
+            обработчик на js. Здесь используется callback api telegram.
+          </p>
+          <pre>
+            <div class="cod__container">
+              <iframe id="code" allowtransparency frameborder="0"
+              src="../data/python_scripts/telegram_bot_1.py"
+              class="iframe__dark"></iframe>
+            </div>
+          </pre>
+          <p>
+            Второе - это тот же код, но написаный на longpool api с
+            использованием библиотеки aiogram. Во время того заказа пришлось всё
+            переделывать раз 10, клиент сам не понимал, что хочет, в результате
+            получились 2 таких кода.
+          </p>
+          <pre>
+            <div class="cod__container">
+              <iframe id="code" allowtransparency frameborder="0"
+              src="../data/python_scripts/telegram_bot_2.py"
+              class="iframe__dark"></iframe>
+            </div>
+          </pre>
+          <p>
+            Третье - это вот такой вот бот, он писался для человека, абсолютно
+            не сведующего в програмировании. Он имеет оооочень гибкие настройки
+            через конфиг файл. Суть этого бота в конечном счёте сводится к
+            выбору пользователем картинки, и нанесению на неё пользовательской
+            надписи (эдакий мини paint). Данный бот реализован на longpool api
+            от vk, с помощью библиотеки vk_api, для нанесения надписи
+            ипользуется PIL.
+          </p>
+          <pre>
+            <div class="cod__container">
+              <iframe id="code" allowtransparency frameborder="0"
+              src="../data/python_scripts/vk_bot.py"
+              class="iframe__dark"></iframe>
+            </div>
+          </pre>
+          <p>
+            Ещё хотелось бы показать такую простенькую библиотеку, упрощающую
+            работу с сервисом vk_coin. Для него была хорошая библиотека на
+            python, однако по каким-то соображениям она была удалена из pip.
+            Поэтому для облегчения написания одного из своих проектов, я её
+            восоздал, это было не сложно, так как все методы имеют чёткое
+            описание.
+          </p>
+          <pre>
+            <div class="cod__container">
+              <iframe id="code" allowtransparency frameborder="0"
+              src="../data/python_scripts/vk_coin_api.py"
+              class="iframe__dark"></iframe>
+            </div>
+          </pre>
+          <p>
+            Ещё есть вот такой бот для телеграм. Этот бот собирает обращения у
+            обычных граждан и отправляет их администрации города Троицка.
+            Благодаря большому количеству клавиш, можно отправить обращение
+            практически в любую организацию, по буквально любому поводу.
+            Этот бот написан на longpool api telegram с использованием
+            библиотеки aiogram.
+          </p>
+          <pre>
+            <div class="cod__container">
+              <iframe id="code" allowtransparency frameborder="0"
+              src="../data/python_scripts/telegram_bot_3.py"
+              class="iframe__dark"></iframe>
+            </div>
+          </pre>
+          <p>
+            Также конец хотелось бы продемонстрироваь мою первую
+            игру. Я её написал во второй половине первого года Яндекс лицея, к
+            сожалению, у меня в тот момент не было особого понимания ни
+            принципов ООП, ни о разработки игр, однако у меня было колоссальное
+            количество времени и огромный интузиазм. В результате у меня
+            получилась игра-песочница с видом сверху. Она сделана на pygame, с
+            использованием PIL.
+          </p>
+          <pre>
+            <div class="cod__container">
+              <iframe id="code" allowtransparency frameborder="0"
+              src="../data/python_scripts/game.py"
+              class="iframe__dark"></iframe>
+            </div>
+          </pre>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__addr">
+        <h1 class="footer__title">Контакты</h1>
+        <address>
+          <p>г. Москва, г. Троицк, ул. Физическая 12</p>
+          <a class="footer__btn" href="mailto:darogozhin-04@yandex.ru">
+            Отправить электронное письмо</a>
+        </address>
+      </div>
+      <div class="contacs__container">
+        <h1 class="contacs__title">И ещё контакты</h1>
+        <ul>
+          <li>
+            <h2 class="contacs__text">Телефон: +7(925)-259-23-90</h2>
+          </li>
+          <li>
+            <h2 class="contacs__text">Почта: darogozhin-04@yandex.ru</h2>
+          </li>
+          <li>
+            <h2 class="contacs__text">И ещё одна почта: rogozhin-04@inbox.ru</h2>
+          </li>
+          <li>
+            <a href="https://github.com/Rogozhin-Dmitry" class="contacs__link">
+            <h2 class="contacs__text">Мой гитхаб</h2>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script type="text/javascript" src="../static/js/main.js"></script>
+    <script type="text/javascript" src="../static/js/code.js"></script>
+  </body>
+</html>
